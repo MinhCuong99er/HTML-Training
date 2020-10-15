@@ -1,0 +1,318 @@
+/*---------- example css ----------*/
+/*name*/
+.net {
+    border: 1px solid $color-black;
+    //width: 40px;
+    //height: 40px;
+    background: white;
+}
+.c-rowlogo {
+    text-align: center;
+    margin-bottom: 30px;
+    .editText {
+        text-align: center;
+        color: #2d286e;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .link {
+        border: medium solid yellow;
+        text-align: center;
+        padding: 15px 30px;
+        display: inline-block;
+        margin-top: 10px;
+        color: yellow;
+    }
+}
+.c-action {
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            display: inline-block;
+            width: percentage(1/8);
+        }
+    }
+    &__item {
+        padding: 10px;
+        background: #ffffff;
+        margin-bottom: 15px;
+        img{
+            width: 100%;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    }
+}
+.c-logo-list-2{
+    padding-bottom: 1px;
+    margin-bottom: 20px;
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0 -10px;
+      // display: flex;
+      // margin: auto;
+      // justify-content: center;
+      li{
+        float: left;
+        width: 50%;
+        padding: 0 10px;
+        margin-bottom: 10px;
+      }
+    }
+}
+.c-logo-list-item{
+    position: relative;
+    z-index: 1;
+    padding-top: percentage(280/400);
+    margin-right: -1px;
+    margin-bottom: -1px;
+    &__inner{
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+}
+.l-footer{
+    .col-sm-4{
+        padding-bottom: 10px;
+    }
+    background-color: #2f2f2f;
+    border-top: 5px black;
+    
+    color: white;
+    h4{
+        font-size: 18px;
+        font-family: Saiza;
+        font-weight: bold;
+        padding: 5px 0px 2px;
+    }
+    ul {
+        font-family: Roboto;
+        font-size: 14px;
+        margin: 0px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &__smallLogo{
+        ul{
+            margin: 0;
+            padding:0;
+            list-style: none; // Khử
+            li{
+                display: inline-block;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+.c-copyRight{
+    text-align: center;
+    background-color: #222222;
+    font-size: 13px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.l-nav{
+    background-color: #2d276d;
+    color: white;
+    height: 20px;
+    line-height: 20px;
+    ul{
+        li{ 
+            list-style: none;
+            display: inline-block;
+            padding-right: 8px;
+        }
+    }
+    .left-awesome{
+        float: left;
+    }
+    .right-awesome{
+        float: right;
+    }
+}
+
+.container-img{
+    position: relative;
+    z-index: 1;
+    padding-top: percentage(230/354);
+    &:before{
+        content: "Before";
+        position: absolute;
+        z-index: 2;
+        background: rgb(94, 86, 86);
+        width: 100%;
+        height: 100%;
+        transform: translate(0%, 0%);
+        opacity: 0.5;
+    }
+    img{
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+    .centerTextInImg{
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        color:red;
+        transform: translate(-50%, -50%);
+        .h1{
+            font-weight: bold;
+            padding-bottom: 5px;
+        } 
+    }
+}
+.location{
+    padding: 20px 0px;
+    ul{
+        li{
+            display: inline-block;
+            list-style: none;
+        }
+    }
+    .btn-primary{
+        font-size: 18px;
+        padding: 10px;
+        text-align: center;
+    }
+}
+.set{
+    h5{
+        font-weight: bold;
+        font-size: 24px;
+        color: blue;
+        padding-top: 10px;
+    }
+    .col-sm-4{
+        padding-bottom: 40px;
+        padding-top: 10px;
+    }
+    .col-sm-8{
+        padding-bottom: 40px;
+        padding-top: 10px;
+        form div {
+            margin-top: 5px
+        }
+        .btn-primary{
+            background-color: #f9b701;
+            font-size: 15px;
+            text-align: center;
+            width: 15%;
+        }
+    }
+}
+
+/*end name*/
+//example responsive css
+@media (min-width: $screen-sm-min) {
+    //mobile lanscape
+
+}
+@media (min-width: $screen-md-min) {
+    //ipad portrait 769px
+    .c-action{
+        ul{
+            margin: 0 -10px;
+            li{
+                width: 30%;
+                float: left;
+                padding: 0 10px;
+            }
+        }
+    }
+    .l-footer{
+        .col-sm-4{
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+@media (min-width: $screen-lg-min) {
+    //ipad lanscape & pc 1024x768px
+    .c-action{
+        ul{
+            li{
+                width: percentage(1/4);
+            }
+        }
+    }
+    .l-nav{
+        height: 36px;
+        line-height: 0px;
+        padding-top: 8px;
+    }
+}
+@media (min-width: $screen-xl-min) {
+    //pc & mac 1280px grow up
+    .c-logo-list-2{
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0 -10px;
+            // display: flex;
+            // margin: auto;
+            // justify-content: center;
+            li{
+              float: left;
+              width: percentage(1/6);
+              padding: 0 10px;
+              margin-bottom: 10px;
+            }
+        }
+        .c-action{
+            ul{
+                li{
+                    width: percentage(1/8);
+                }
+                li:nth-child(6) {
+                    margin: 0px -29px;
+                }
+                li:nth-child(3) {
+                    width: 23%;
+                    margin: 0 -44px;
+                }
+            }
+        }
+    }
+    .c-action{
+        ul{
+            li{
+                width: percentage(1/8);
+            }
+            li:nth-child(6) {
+                margin: 0px -29px;
+            }
+            li:nth-child(3) {
+                width: 23%;
+                margin: 0 -44px;
+            }
+        }
+    }
+}
+//end example responsive css
+/*---------- end example css ----------*/
